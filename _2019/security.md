@@ -18,44 +18,38 @@ _احتمالا_ قرار است کهدوران سختی را بگزرانید.
 اینجا قرار است به چیزهای سطح بالای زیادی اشاره کنیم، اما این یک روند است،
 و در این جهت، خود آموزی یکی از بهترین کار هاییست که میتوانید انجام دهید. پس:
 
-## Follow the Right People
+## افراد صحیح را دنبال کنید
 
-One of the best ways to improve your security know-how is to follow
-other people who are vocal about security. Some suggestions:
+یکی از بهترین راه های افزایش امنیت شما، این است که بدانید دنبال کردن افراد دیگری است که راجب امنیت سخن میگویند، چگونه است. چند پیشنهاد:
 
- - [@TroyHunt](https://twitter.com/TroyHunt)
- - [@SwiftOnSecurity](https://twitter.com/SwiftOnSecurity)
- - [@taviso](https://twitter.com/taviso)
- - [@thegrugq](https://twitter.com/thegrugq)
- - [@tqbf](https://twitter.com/tqbf)
- - [@mattblaze](https://twitter.com/mattblaze)
- - [@moxie](https://twitter.com/moxie)
+- [@TroyHunt](https://twitter.com/TroyHunt)
+- [@SwiftOnSecurity](https://twitter.com/SwiftOnSecurity)
+- [@taviso](https://twitter.com/taviso)
+- [@thegrugq](https://twitter.com/thegrugq)
+- [@tqbf](https://twitter.com/tqbf)
+- [@mattblaze](https://twitter.com/mattblaze)
+- [@moxie](https://twitter.com/moxie)
 
-See also [this
-list](https://heimdalsecurity.com/blog/best-twitter-cybersec-accounts/)
-for more suggestions.
+همچنان [این
+لیست](https://heimdalsecurity.com/blog/best-twitter-cybersec-accounts/)
+را برای پیشنهاد های بیشتر ببینید.
 
-## General Security Advice
+## پیشنهاد های عمومی امنیت
 
-Tech Solidarity has a pretty great list of [do's and don'ts for
-journalists](https://techsolidarity.org/resources/basic_security.htm)
-that has a lot of sane advice, and is decently up-to-date. @thegrugq
-also has a good blog post on [travel security
-advice](https://medium.com/@thegrugq/stop-fabricating-travel-security-advice-35259bf0e869)
-that's worth reading. We'll repeat much of the advice from those sources
-here, plus some more. Also, get a [USB data
-blocker](https://amzn.com/B00QRRZ2QM), because [USB is
-scary](https://www.bleepingcomputer.com/news/security/heres-a-list-of-29-different-types-of-usb-attacks/).
+تک سالیدتری یک لیست خیلی خوب از  [باید ها و نباید ها برای خبرنگاران](https://techsolidarity.org/resources/basic_security.htm)
+که تعداد زیادی پیشنهاد منطقی دارد، و به میزان قابل قبولی به روز است. @thegrugq
+هم یک پست بلاگ خوب روی [پیشنهاد امنیت مسافرتی](https://medium.com/@thegrugq/stop-fabricating-travel-security-advice-35259bf0e869)
+ دارد که ارزش خواندن دارد. قرار است اینجا اکثرا پیشنهادات این منبابع را تکرار کنیم. همچنین یک [مسدود کننده داده یو اس بی](https://amzn.com/B00QRRZ2QM) بگیرید, جون [یو اس بی ترسناک است](https://www.bleepingcomputer.com/news/security/heres-a-list-of-29-different-types-of-usb-attacks/).
 
 ## Authentication
 
 The very first thing you should do, if you haven't already, is download
 a password manager. Some good ones are:
 
- - [1password](https://1password.com/)
- - [KeePass](https://keepass.info/)
- - [BitWarden](https://bitwarden.com/)
- - [`pass`](https://www.passwordstore.org/)
+- [1password](https://1password.com/)
+- [KeePass](https://keepass.info/)
+- [BitWarden](https://bitwarden.com/)
+- [`pass`](https://www.passwordstore.org/)
 
 If you're particularly paranoid, use one that encrypts the passwords
 locally on your computer, as opposed to storing them in plain-text at
@@ -105,7 +99,7 @@ trying to secure against?
 
 [![$5 wrench](https://imgs.xkcd.com/comics/security.png)](https://xkcd.com/538/)
 
- - Offline attacks (someone steals your laptop while it's off): turn on
+- Offline attacks (someone steals your laptop while it's off): turn on
    full disk encryption. ([cryptsetup +
    LUKS](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_a_non-root_file_system)
    on Linux,
@@ -113,15 +107,15 @@ trying to secure against?
    on Windows, [FileVault](https://support.apple.com/en-us/HT204837) on
    macOS. Note that this won't help if the attacker _also_ has you and
    really wants your secrets.
- - Online attacks (someone has your laptop and it's on): use file
+- Online attacks (someone has your laptop and it's on): use file
    encryption. There are two primary mechanisms for doing so
-    - Encrypted filesystems: stacked filesystem encryption software encrypts files individually rather than having encrypted block devices. You can "mount" these filesystems by providing the decryption key, and then browse the files inside it freely. When you unmount it, those files are all unavailable.  Modern solutions include [gocryptfs](https://github.com/rfjakob/gocryptfs) and [eCryptFS](http://ecryptfs.org/). More detailed comparisons can be found [here](https://nuetzlich.net/gocryptfs/comparison/) and [here](https://wiki.archlinux.org/index.php/disk_encryption#Comparison_table)
-    - Encrypted files: encrypt individual files with symmetric
+  - Encrypted filesystems: stacked filesystem encryption software encrypts files individually rather than having encrypted block devices. You can "mount" these filesystems by providing the decryption key, and then browse the files inside it freely. When you unmount it, those files are all unavailable.  Modern solutions include [gocryptfs](https://github.com/rfjakob/gocryptfs) and [eCryptFS](http://ecryptfs.org/). More detailed comparisons can be found [here](https://nuetzlich.net/gocryptfs/comparison/) and [here](https://wiki.archlinux.org/index.php/disk_encryption#Comparison_table)
+  - Encrypted files: encrypt individual files with symmetric
       encryption (see `gpg -c`) and a secret key. Or, like `pass`, also
       encrypt the key with your public key so only you can read it back
       later with your private key. Exact encryption settings matter a
       lot!
- - [Plausible
+- [Plausible
    deniability](https://en.wikipedia.org/wiki/Plausible_deniability)
    (what seems to be the problem officer?): usually lower performance,
    and easier to lose data. Hard to actually prove that it provides
@@ -132,8 +126,8 @@ trying to secure against?
    and then consider whether you may want to try
    [VeraCrypt](https://www.veracrypt.fr/en/Home.html) (the maintained
    fork of good ol' TrueCrypt).
- - Encrypted backups: use [Tarsnap](https://www.tarsnap.com/) or [Borgbase](https://www.borgbase.com/)
-    - Think about whether an attacker can delete your backups if they
+- Encrypted backups: use [Tarsnap](https://www.tarsnap.com/) or [Borgbase](https://www.borgbase.com/)
+  - Think about whether an attacker can delete your backups if they
       get a hold of your laptop!
 
 ## Internet Security & Privacy
@@ -152,7 +146,7 @@ set up [WireGuard](https://www.wireguard.com/) for yourself -- it's
 [excellent](https://latacora.micro.blog/there-will-be/)!
 
 {% comment %}
-https://raymii.org/s/blog/Cancellation_notice_for_cipherlist_ssldecoder_and_certificatemonitor.html
+<https://raymii.org/s/blog/Cancellation_notice_for_cipherlist_ssldecoder_and_certificatemonitor.html>
 cipherli.st and ssldecoder.org are cancelled
 {% endcomment %}
 
