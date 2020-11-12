@@ -20,7 +20,8 @@ _احتمالا_ قرار است کهدوران سختی را بگزرانید.
 
 ## افراد صحیح را دنبال کنید
 
-یکی از بهترین راه های افزایش امنیت شما، این است که بدانید دنبال کردن افراد دیگری است که راجب امنیت سخن میگویند، چگونه است. چند پیشنهاد:
+یکی از بهترین راه های افزایش امنیت شما، این است که بدانید
+ دنبال کردن افراد دیگری است که راجب امنیت سخن میگویند، چگونه است. چند پیشنهاد:
 
 - [@TroyHunt](https://twitter.com/TroyHunt)
 - [@SwiftOnSecurity](https://twitter.com/SwiftOnSecurity)
@@ -39,40 +40,39 @@ _احتمالا_ قرار است کهدوران سختی را بگزرانید.
 تک سالیدتری یک لیست خیلی خوب از  [باید ها و نباید ها برای خبرنگاران](https://techsolidarity.org/resources/basic_security.htm)
 که تعداد زیادی پیشنهاد منطقی دارد، و به میزان قابل قبولی به روز است. @thegrugq
 هم یک پست بلاگ خوب روی [پیشنهاد امنیت مسافرتی](https://medium.com/@thegrugq/stop-fabricating-travel-security-advice-35259bf0e869)
- دارد که ارزش خواندن دارد. قرار است اینجا اکثرا پیشنهادات این منبابع را تکرار کنیم. همچنین یک [مسدود کننده داده یو اس بی](https://amzn.com/B00QRRZ2QM) بگیرید, جون [یو اس بی ترسناک است](https://www.bleepingcomputer.com/news/security/heres-a-list-of-29-different-types-of-usb-attacks/).
+دارد که ارزش خواندن دارد. قرار است اینجا اکثرا پیشنهادات این منبابع را تکرار کنیم. همچنین یک [مسدود کننده داده یو اس بی](https://amzn.com/B00QRRZ2QM) بگیرید, جون [یو اس بی ترسناک است](https://www.bleepingcomputer.com/news/security/heres-a-list-of-29-different-types-of-usb-attacks/).
 
-## Authentication
+## احراز هویت
 
-The very first thing you should do, if you haven't already, is download
-a password manager. Some good ones are:
+اولین کاری که باید انجام دهید, البته اگر هنوز انجام نداده اید,
+ دانلود کردن یک برنامه مدیریت کلمات عبور است. اینها چند تا از نرم افزار های مناسب هستند:
 
 - [1password](https://1password.com/)
 - [KeePass](https://keepass.info/)
 - [BitWarden](https://bitwarden.com/)
 - [`pass`](https://www.passwordstore.org/)
 
-If you're particularly paranoid, use one that encrypts the passwords
-locally on your computer, as opposed to storing them in plain-text at
-the server. Use it to generate passwords
-for all the web sites you care about right now. Then, switch on
-two-factor authentication, ideally with a
-[FIDO/U2F](https://fidoalliance.org/) dongle (a
-[YubiKey](https://www.yubico.com/quiz/) for example, which has [20% off
-for students](https://www.yubico.com/why-yubico/for-education/)). TOTP
-(like Google Authenticator or Duo) will also work in a pinch, but
-[doesn't protect against
-phishing](https://twitter.com/taviso/status/1082015009348104192). SMS is
-pretty much useless unless your threat model only includes random
-strangers picking up your password in transit.
+اگر به معنی واقعی کلمه پارانوئید هستید, یکی را استفاده کنید
+که کلمات عبور را به صورت رمز شده روی کامپیوتر محلی شما
+ذخیره میکند, نه آنکه به صورت متن ساده  و در یک سرور ذخیره کند.
+با استفاده از نمرم افزار، همین الان برای همه سایت هایی که بهشان اهمیت
+میدهید رمز بسازید. سپس, احراز هویت دو مرحله ای را فعال کنید, با یک
+[FIDO/U2F](https://fidoalliance.org/) دانگل (یک
+[YubiKey](https://www.yubico.com/quiz/) برای مثال, که [برای دانشجویان 20% تخفیف دارد.](https://www.yubico.com/why-yubico/for-education/)). TOTP
+(مثل Google Authenticator یا Duo) هم در شرایط اضطرار کار میکنند, اما
+[شما را در برابر فیشینگ مقاوم نمیکنند.](https://twitter.com/taviso/status/1082015009348104192). پیام کوتاه هم تقریبا بی فایده
+است، مگر اینکه مدل تحدید شما تنها شامل غریبه های اتفاقی باشد که کلمه عبور شما را در ترانزیت شنود میکنند.
 
-Also, a note about paper keys. Often, services will give you a "backup
-key" that you can use as a second factor if you lose your real second
-factor (btw, always keep a backup dongle somewhere safe!). While you
-_can_ stick those in your password managers, that means that should
-someone get access to your password manager, you're totally hosed (but
-maybe you're okay with that thread model). If you are truly paranoid,
-print out these paper keys, never store them digitally, and place them
-in a safe in the real world.
+همجنان, یک نکته راجب کلید های روی کاغذ. معمولا, سرویس ها
+یک "کلید پشتیبان" به شما میدهند که میتوانید به ع
+نوان مرحله دوم احراز هویت، در شرایطی که مرحله دوم
+واقعی را از دست دادید استفاده کنید (در ضمن, همیشه یک دانگل پشتیبان
+در یک جای امن نگاه دارید!). گرچه_میتوانید_ آنهارا هم در خود نرم ا
+فزار مدیریت کلمه عبور ذخیره کنید, که یعنی اگر کسی به نرم افزار م
+دیریت کلمه عبور دسترسی پیدا کند , همه چیز از دست خواهد رفت
+(البته ممکن است شما با این مدل تحدید مشکلی نداشته باشید.). اگر حقیقتا پارانوئید هستید,
+برگه های کلید را چاپ کنید, هیچ گاه دیجیتالی ذخیرشان نکنید, و
+داخل یک گاو صندوق در دنیا واقعی نگهشان دارید.
 
 ## Private Communication
 
